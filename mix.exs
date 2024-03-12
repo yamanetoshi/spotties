@@ -18,7 +18,8 @@ defmodule Spotties.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Spotties.Application, []},
+      # mod: {Spotties.Application, []},
+      mod: {Spotties, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -57,7 +58,9 @@ defmodule Spotties.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
-      {:bandit, "~> 1.2"}
+      {:bandit, "~> 1.2"},
+      {:desktop, "~> 1.5"},
+      {:wx, "~> 1.1", hex: :bridge, targets: [:android, :ios]}
     ]
   end
 

@@ -27,7 +27,8 @@ config :spotties, SpottiesWeb.Endpoint,
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:spotties, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:spotties, ~w(--watch)]}
-  ]
+  ],
+  server: true
 
 # ## SSL Support
 #
